@@ -113,7 +113,7 @@
 
 // // -----------------------------------
 
-//question1
+//question1: make copy of the object and manipulate values in the new copied object
 console.log("question 1");
 
 
@@ -125,20 +125,20 @@ const person = {
     bestDomain:"analytics"
 }
 
-let akt = JSON.parse(JSON.stringify(person));
-console.log(akt);                          // Object before manipulating values.
+let nv = JSON.parse(JSON.stringify(person));
+console.log(nv);                          // Object before manipulating values.
 
 
-akt.name="ABHISHEK";                       // Use of dot notation.
-akt['age']=21;                             // Use of bracket notation.
-akt.bestDomain="Web Dev";                  // Use of dot notation.
+nv.name="Nandini";                       // Use of dot notation.
+nv['age']=21;                             // Use of bracket notation.
+nv.bestDomain="Web Dev";                  // Use of dot notation.
 
 
-console.log(akt);                          //Object after manipulating values.
+console.log(nv);                          //Object after manipulating values.
 
 
 
-//question2
+//question2: print all the properties using appropriate for loop 
 
 console.log("question 2");
 for (let x in person) {
@@ -146,12 +146,9 @@ for (let x in person) {
   
   }
 
-  for (let x in akt) {
-    console.log(`${x}: ${akt[x]}`);
+  for (let x in nv) {
+    console.log(`${x}: ${nv[x]}`);
   }
-
-// question1: make copy of the object and manipulate values inthe new copied object
-// question2: print all the properties using appropriate for loop 
 
 
 
